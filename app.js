@@ -70,10 +70,38 @@ const slider = () => {
 
 }
 
+const typewriter = () => {
+    const texts = ['make websites', 'create things', 'write stories', 'build games'];
+    let count = 0;
+    let index = 0;
+    let currentText = '';
+    let letter = '';
+
+    (function type() {
+
+        if (count === texts.length) { // check amount of texts items
+            count = 0; // create loop by reseting count to 0 when total texts has been reached
+        }
+
+        currentText = texts[count]; // use count to select specific text
+        letter = currentText.slice(0, ++index);
+
+        document.querySelector('.typing').textContent = letter;
+        if (letter.length === currentText.length) {
+            count++;
+            index = 0;
+        }
+
+        setTimeout(type, 400);
+
+    }()); // invoke function immediately
+}
+
 // keep it tidy by invoking smaller functions inside of app function
 const app = () => {
     navSlide();
     slider();
+    typewriter();
 }
 
 app();
