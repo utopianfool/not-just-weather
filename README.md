@@ -3,7 +3,7 @@
 Collection of mini projects combined into one using vanilla javascript.
 by The Utopian Fool
 
-:globe_with_meridans:
+:globe_with_meridians:
 [Demo](https://weather.utopianfool.co.uk)
 
 ------------------------------------------------------
